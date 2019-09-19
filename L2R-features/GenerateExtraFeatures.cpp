@@ -380,6 +380,12 @@ int main(int argc, char * argv[])
 				//std::cout<<"WARNING: assuming Krovetz stemming!"<<std::endl;
 				word = kstemmer->kstem_stemmer(word);
 			}
+			
+			else if(strcmp(stemmerType.c_str(), "none") == 0 ){
+				//Krovetz stemming
+				//std::cout<<"WARNING: assuming Krovetz stemming!"<<std::endl;
+				word = word;
+			}
 	
 			std::cout<<"["<<word<<"]"<<std::endl;
 
